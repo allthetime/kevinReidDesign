@@ -7,7 +7,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls), name='admin'),
     url(r'^$', 'portfolio.views.index', name="home"),
-    url(r'^(\w+)$', 'portfolio.views.project_page', name="project"),
+    # url(r'^(\w+)$', 'portfolio.views.project_page', name="project"),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
