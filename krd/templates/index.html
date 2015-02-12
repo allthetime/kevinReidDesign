@@ -2,4 +2,11 @@
 
 {% block content %}
 <a href="{{STATIC_URL}}test.txt">wut</a>
+    {% for project in projects %}
+        {{ project.title }}
+        {{ project.path }}
+        {{ project.tag_line }}
+        <img src="{{ project.project_image.url }}"></img>
+    {% endfor %}
 {% endblock %}
+

@@ -1,1 +1,12 @@
-yo yo
+{% extends "base.html" %}
+
+{% block content %}
+    yo yo
+
+    {% for image in images %}
+        <img src="{{ MEDIA_URL }}{{ image.image }}"></img>
+    {% endfor %}
+
+
+    {{ project.description }}
+{% endblock %}
